@@ -1,0 +1,78 @@
+## Question 1-7 require no code
+# Question 8
+x <- list(2, "a", "b", TRUE)
+y<-x[[1]]
+class(y)
+
+# Question 9
+x<-1:4
+y<-2:3
+x+y
+
+# Question 10
+x <- c(3, 5, 1, 10, 12, 6)
+x[x < 6] <- 0
+
+# Question 11
+data<-read.csv("C:\\Users\\Quan Mai\\Downloads\\Video\\Compressed\\hw1_data.csv")
+str(data)
+head (data)
+
+# Question 12
+
+### Extract the first 2 rows of the data frame and print them to the console. What does the output look like?
+
+data[1:2,]
+
+# Question 13
+
+### How many observations (i.e. rows) are in this data frame?
+nrow (data)
+
+# Question 14
+### Extract the last 2 rows of the data frame and print them to the console. What does the output look like?
+
+data[152:153,]
+
+# Question 15
+### What is the value of Ozone in the 47th row?
+data[47,1]
+
+# Question 16
+###How many missing values are in the Ozone column of this data frame?
+length(data$Ozone)
+t<-na.omit(data$Ozone)
+length(t)
+length(data$Ozone)-length(t)
+
+# Question 17
+### What is the mean of the Ozone column in this dataset? Exclude missing values (coded as NA) from this calculation 
+
+mean(t.)
+
+# Question 18
+### Extract the subset of rows of the data frame where Ozone values are above 31 and Temp values are above 90. What is the mean of Solar.R in this subset?
+y<-subset(data,Ozone>31)
+z<-subset(y,Temp>90)
+mean(z$Solar.R)
+
+# Question 19
+### What is the mean of "Temp" when "Month" is equal to 6? 
+k<-subset(data,Month==6)
+mean(k$Temp)
+
+# Question 20
+### What was the maximum ozone value in the month of May (i.e. Month = 5)?
+ f<-subset(data,Month==5)
+max(na.omit(f$Ozone))
+
+
+
+
+
+
+
+
+
+
+
